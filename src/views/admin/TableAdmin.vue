@@ -104,11 +104,11 @@ export default {
         console.log(e);
       }
     },
-    editData(data) {
+    editData(item) {
       this.$bvModal.show("edit-modal");
-      this.obj = data;
-      this.itemAll = data.item;
-      console.log(this.itemAll);
+      this.obj = item;
+      this.itemAll = item;
+      console.log(this.obj);
     },
     deleteData(index, data) {
       http.delete(`admin/inetructions/${data.item.id}`).then(() => {
@@ -130,4 +130,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+tr {
+  background-color: #fff;
+}
+</style>

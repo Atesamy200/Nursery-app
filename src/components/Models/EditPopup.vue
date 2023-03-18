@@ -33,7 +33,6 @@ export default {
   },
   data() {
     return {
-      index: "",
       items: [],
       form: {
         instruction: "",
@@ -42,21 +41,22 @@ export default {
   },
   watch: {
     obj() {
-      const { data, index } = this.obj;
-      this.form.instruction = data.instruction;
-      console.log(data);
-      this.index = index;
+      const { instruction } = this.obj;
+      this.form.instruction = instruction;
     },
   },
   methods: {
     editItem() {
       http.put(`admin/inetructions/${this.obj.id}`, this.form).then((res) => {
         this.form = res.data.data;
+        console.log(this.obj.id);
+
         this.$bvModal.hide("edit-modal");
       });
     },
   },
+  mounted() {
+    console.log(this.obj);
+  },
 };
 </script>
-
-<style></style>

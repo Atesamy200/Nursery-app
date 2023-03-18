@@ -4,29 +4,28 @@
     <v-container>
       <img class="contact-img" src="../assets/9435123826_a4c3b35c08_o.jpg" />
     </v-container>
-    <v-container style="height: 60vh; width: 50%;">
+    <v-container style="height: 60vh; width: 50%">
       <h1 class="contact-head">برجاء كتابة شكوي أو اقتراح</h1>
       <v-card>
-
-      <v-textarea
-        name="input-7-1"
-        filled
-        label=""
-        auto-grow
-        placeholder="قم بالتعبير عن شكواك و مقترحك هنا "
-        v-model="body"
-      ></v-textarea>
-      <div style="text-align: right">
-        <v-btn
-          class="ma-2"
-          color="primary"
-          @click="faqSend"
-          :disabled="body.length < 5"
-        >
-          ارسال
-        </v-btn>
-      </div>
-    </v-card>
+        <v-textarea
+          name="input-7-1"
+          filled
+          label=""
+          auto-grow
+          placeholder="قم بالتعبير عن شكواك و مقترحك هنا "
+          v-model="form.suggestion"
+        ></v-textarea>
+        <div style="text-align: right">
+          <v-btn
+            class="ma-2"
+            color="primary"
+            @click="faqSend"
+            :disabled="form.suggestion.length < 5"
+          >
+            ارسال
+          </v-btn>
+        </div>
+      </v-card>
     </v-container>
     <footer-comp></footer-comp>
   </div>
@@ -40,7 +39,9 @@ export default {
   name: "FaqView",
   data() {
     return {
-      body: "",
+      form: {
+        suggestion: "",
+      },
     };
   },
   components: {
@@ -50,11 +51,10 @@ export default {
   methods: {
     async faqSend() {
       try {
-        await http
-          .post("user/suggestion", this.body, { params: { body: "hi" } })
-          .then(() => {
-            console.log("ok");
-          });
+        await http.post("user/suggestions", this.form).then(() => {
+          this.form = {};
+          alert("تم اضافه بنجاح");
+        });
       } catch (e) {
         console.log("error");
       }
