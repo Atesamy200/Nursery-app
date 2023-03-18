@@ -1,39 +1,39 @@
 <template>
-  <div style="margin: 200px auto">
+  <div class="col-lg-6 m-auto">
     <v-card class="p-2">
-    <h2 class="text-center">تسجيل الدخول</h2>
-    <v-form @submit.prevent="submitLogin" v-model="valid">
-      <v-container>
-        <v-row>
-          <div>
-            <v-col cols="12" md="12">
-              <v-text-field
-                v-model="Form.email"
-                :rules="emailRules"
-                placeholder="الايميل"
-                required
-                outlined
-              ></v-text-field>
-            </v-col>
-            <v-col cols="12" md="12">
-              <v-text-field
-                v-model="Form.password"
-                :rules="passRules"
-                placeholder="كلمة المرور"
-                required
-                type="password"
-                outlined
-              ></v-text-field>
-              <p>{{ userError }}</p>
-            </v-col>
-            <v-col>
-              <button>تسجيل الدخول</button>
-            </v-col>
-          </div>
-        </v-row>
-      </v-container>
-    </v-form>
-  </v-card>
+      <h2 class="text-center">تسجيل الدخول</h2>
+      <v-form @submit.prevent="submitLogin" v-model="valid">
+        <v-container>
+          <v-row>
+            <div>
+              <v-col cols="12" md="12">
+                <v-text-field
+                  v-model="Form.email"
+                  :rules="emailRules"
+                  placeholder="الايميل"
+                  required
+                  outlined
+                ></v-text-field>
+              </v-col>
+              <v-col cols="12" md="12">
+                <v-text-field
+                  v-model="Form.password"
+                  :rules="passRules"
+                  placeholder="كلمة المرور"
+                  required
+                  type="password"
+                  outlined
+                ></v-text-field>
+                <p>{{ userError }}</p>
+              </v-col>
+              <v-col>
+                <button>تسجيل الدخول</button>
+              </v-col>
+            </div>
+          </v-row>
+        </v-container>
+      </v-form>
+    </v-card>
   </div>
 </template>
 <script>

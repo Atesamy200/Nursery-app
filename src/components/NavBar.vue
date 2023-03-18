@@ -49,18 +49,18 @@
       <router-link class="nav-link navbar-link" to="/about"
         >معلومات عنا</router-link
       >
-      <router-link class="nav-link navbar-link" to="/instructions"
-        > تعليمات  </router-link
-      >
+      <router-link class="nav-link navbar-link" to="/instructions">
+        تعليمات
+      </router-link>
       <!-- <router-link class="nav-link navbar-link" to="/directions"
         >ارشادات</router-link
       > -->
       <router-link class="nav-link navbar-link" to="/faq"
         >شكاوي و مقترحات</router-link
       >
-      <router-link class="nav-link navbar-link" to="/contact"
+      <!-- <router-link class="nav-link navbar-link" to="/contact"
         >تواصل معنا</router-link
-      >
+      > -->
     </v-app-bar>
   </div>
 </template>

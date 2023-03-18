@@ -22,9 +22,7 @@
       <router-link class="nav-link navbar-link" to="/TableAdmin"
         >تعليمات</router-link
       >
-      <router-link class="nav-link navbar-link" to="/guidances"
-        >ارشادات</router-link
-      >
+
       <router-link class="nav-link navbar-link" to="/faq-admin"
         >شكاوي و مقترحات</router-link
       >
