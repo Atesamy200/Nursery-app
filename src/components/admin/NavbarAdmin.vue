@@ -16,9 +16,9 @@
 
       <v-spacer></v-spacer>
 
-      <router-link class="nav-link navbar-link" to="/admin"
+      <!-- <router-link class="nav-link navbar-link" to="/admin"
         >الصفحة الرئيسية</router-link
-      >
+      > -->
       <router-link class="nav-link navbar-link" to="/TableAdmin"
         >تعليمات</router-link
       >
