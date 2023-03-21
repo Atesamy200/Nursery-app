@@ -1,7 +1,7 @@
 import axios from "axios";
 import router from "@/router";
 
-const domain = "http://127.0.0.1:1200/api/";
+const domain = "http://127.0.0.1:8000/api/";
 const http = axios.create({
   baseURL: domain,
   headers: {

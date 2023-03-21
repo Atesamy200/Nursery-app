@@ -9,30 +9,53 @@
             class="mx-auto"
             style="padding: 5%; height: 100%; text-align: center"
           >
-            <v-avatar>
-              <div
-                class="seller_image"
-                :style="{
-                  background: 'url(' + user_credentials.avatar + ')',
-                  backgroundSize: 'contain',
-                }"
-              ></div>
-            </v-avatar>
-            <hr />
-            <v-spacer></v-spacer>
-            <v-list-item three-line>
+            <v-list-item>
               <v-list-item-content>
-                <v-list-item-title class="text-h5 mb-1">
-                  بسنت
-                </v-list-item-title>
-                <v-list-item-subtitle>مهندس برمجة</v-list-item-subtitle>
-                <v-list-item-subtitle>القاهرة</v-list-item-subtitle>
-                <v-list-item-subtitle>26 عام</v-list-item-subtitle>
+                <h2 style="font-weight: bold">بيانات أولياء الأمور</h2>
+                <hr />
+                <v-list-item-title> بسنت أحمد </v-list-item-title>
+                <hr />
+                <v-list-item-subtitle class="pt-1"
+                  >السن : 5 سنوات</v-list-item-subtitle
+                >
+                <hr />
+                <v-list-item-subtitle class="pt-1"
+                  >النوع : أنثي</v-list-item-subtitle
+                >
+                <hr />
+                <v-list-item-subtitle class="pt-1"
+                  >رقم الوالد : 010125478541</v-list-item-subtitle
+                >
+                <hr />
+                <v-list-item-subtitle class="pt-1"
+                  >رقم الوالدة : 010125878841</v-list-item-subtitle
+                >
+                <hr />
+                <v-list-item-subtitle class="pt-1"
+                  >اسم الوالد : أحمد عبد الوهاب</v-list-item-subtitle
+                >
+                <hr />
+                <v-list-item-subtitle class="pt-1">
+                  الحالة الصحية للطفل : سليم</v-list-item-subtitle
+                >
+                <hr />
+                <v-list-item-subtitle class="pt-1"
+                  >اسم الوالدة : رباب عبد التواب</v-list-item-subtitle
+                >
+                <hr />
+                <v-list-item-subtitle class="pt-1"
+                  >مؤهل الوالد : بكالوريوس هندسة</v-list-item-subtitle
+                >
+                <hr />
+                <v-list-item-subtitle class="pt-1"
+                  >مؤهل الوالدة : ليسانس أداب</v-list-item-subtitle
+                >
+                <hr />
               </v-list-item-content>
             </v-list-item>
             <v-card-actions>
               <v-btn
-                style="margin: 0 auto"
+                style="margin: 0 auto; color: #fff"
                 outlined
                 rounded
                 text
@@ -64,9 +87,23 @@
                 <v-icon v-else> mdi-pencil </v-icon>
               </v-btn>
             </v-toolbar>
-            <v-row>
-              <v-card-text style="display: flex; justify-content: space-around">
-                <v-col md="5" sm="12">
+            <v-container>
+              <v-row>
+                <v-col md="12" sm="12" class="m-auto">
+                  <v-avatar
+                    class="d-block m-auto"
+                    style="height: 100px; min-width: 100px; width: 100px"
+                  >
+                    <div
+                      class="seller_image"
+                      :style="{
+                        background: 'url(' + user_credentials.avatar + ')',
+                        backgroundSize: 'contain',
+                      }"
+                    ></div>
+                  </v-avatar>
+                </v-col>
+                <v-col md="6" sm="12">
                   <v-text-field
                     :disabled="!isEditing"
                     color="white"
@@ -75,7 +112,7 @@
                     v-model="userData.name"
                   ></v-text-field>
                 </v-col>
-                <v-col md="5" sm="12">
+                <v-col md="6" sm="12">
                   <v-text-field
                     :disabled="!isEditing"
                     color="white"
@@ -98,19 +135,21 @@
                     reverse
                   ></v-text-field>
                 </v-col>
-              </v-card-text>
-              <v-card-text style="display: flex; justify-content: space-around">
-                <v-col md="5" sm="12">
-                  <v-text-field
-                    :disabled="!isEditing"
-                    color="white"
-                    label="رقم الهاتف"
-                    reverse
-                    v-model="userData.phone"
-                  ></v-text-field>
-                </v-col>
-              </v-card-text>
-            </v-row>
+                <v-card-text
+                  style="display: flex; justify-content: space-around"
+                >
+                  <v-col md="5" sm="12">
+                    <v-text-field
+                      :disabled="!isEditing"
+                      color="white"
+                      label="رقم الهاتف"
+                      reverse
+                      v-model="userData.phone"
+                    ></v-text-field>
+                  </v-col>
+                </v-card-text>
+              </v-row>
+            </v-container>
             <v-divider></v-divider>
             <v-card-actions>
               <v-spacer></v-spacer>
@@ -126,16 +165,18 @@
         <!-- End Profile Info -->
       </v-row>
     </v-container>
+    <additional-data></additional-data>
     <footer-comp></footer-comp>
   </div>
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import AdditionalData from "@/components/AdditionalData.vue";
 import FooterComp from "@/components/FooterComp.vue";
 export default {
   name: "ProfileView",
-  components: { NavBar, FooterComp },
+  components: { NavBar, FooterComp, AdditionalData },
   data() {
     return {
       user_credentials: {
