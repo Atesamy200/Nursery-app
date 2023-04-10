@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="font-size:20px; line-height:2;">
     <b-card no-body>
       <b-tabs pills card>
         <b-tab title="تقييم الطفل الشهري" active

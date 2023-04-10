@@ -17,9 +17,7 @@
              في حضانه علم طفلك نسعي لتنمية الأطفال لكي يكتسبوا حب التعلم مدى الحياة. حيث نساعد أطفالنا على تنمية العقول المبدعة والشغوفة وتزويدهم 
              بالمهارات والمعارف التي ستعدهم لحياة ناجحة صحيه ومستقبل مشرق
             </p>
-            <v-btn class="learn-more" depressed color="primary">
-              المزيد ..
-            </v-btn>
+            
           </v-col>
         </v-row>
       </v-container>
@@ -71,9 +69,7 @@
               </v-card-subtitle>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="orange lighten-2" depressed text>
-                  المزيد..
-                </v-btn>
+                
               </v-card-actions>
             </v-card>
           </v-col>
@@ -92,9 +88,7 @@
               >
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="orange lighten-2" depressed text>
-                  المزيد..
-                </v-btn>
+                
               </v-card-actions>
             </v-card>
           </v-col>
@@ -115,9 +109,7 @@
               </v-card-subtitle>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="orange lighten-2" depressed text>
-                  المزيد..
-                </v-btn>
+                
               </v-card-actions>
             </v-card>
           </v-col>
@@ -136,9 +128,7 @@
               </v-card-subtitle>
               <v-card-actions>
                 <v-spacer></v-spacer>
-                <v-btn color="orange lighten-2" depressed text>
-                  المزيد..
-                </v-btn>
+                
               </v-card-actions>
             </v-card>
           </v-col>

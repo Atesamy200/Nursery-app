@@ -4,10 +4,11 @@
     <v-container>
       <v-row>
         <!-- Start Card -->
-        <v-col md="4" sm="12">
+        <v-col md="6" sm="12">
           <v-card
             class="mx-auto"
-            style="padding: 5%; height: 100%; text-align: center"
+            style="padding: 5%; height: 100%; text-align: center; font-size:20px; line-height:2;"
+            
           >
             <v-list-item>
               <v-list-item-content>
@@ -69,7 +70,12 @@
         </v-col>
         <!-- End Card -->
         <!-- Start Profile Info -->
-        <v-col md="8" sm="12">
+        <v-col cols="12" lg="6"> 
+    <additional-data></additional-data>
+        </v-col>
+        <!-- End Profile Info -->
+      </v-row>
+    <v-col md="6" sm="12">
           <v-card class="overflow-hidden" color="indigo lighten-1" dark>
             <v-toolbar flat color="indigo">
               <v-icon>mdi-account</v-icon>
@@ -162,10 +168,8 @@
             </v-snackbar>
           </v-card>
         </v-col>
-        <!-- End Profile Info -->
-      </v-row>
+    
     </v-container>
-    <additional-data></additional-data>
     <footer-comp></footer-comp>
   </div>
 </template>
